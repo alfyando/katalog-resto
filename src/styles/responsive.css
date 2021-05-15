@@ -1,0 +1,65 @@
+.list {
+    display: grid;
+}
+
+@media screen and (max-width: 499px) {
+    .nav {
+        display: none;
+    }
+
+    .navmobile {
+        background-color: cornflowerblue;
+        z-index: 10;
+        width: 100%;
+        position: absolute;
+        -webkit-transform: translate(-100%, 0);
+        transform: translate(-100%, 0);
+        transition: transform 0.2s ease;
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .navitemmobile {
+        display: list-item;
+        text-align: left;
+        color: cornflowerblue;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .menumobile {
+        display: none
+    }
+    
+    .navmobile {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .logo {
+        width: 30%;
+    }
+
+    .navlist {
+        width: 70%;
+    }
+
+    .list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+		grid-row-gap: 16px
+    }
+}
+
+@media screen and (min-width: 900px) {
+	.list {
+		grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+		grid-row-gap: 16px
+	}
+}
