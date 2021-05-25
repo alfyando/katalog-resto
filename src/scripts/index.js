@@ -10,14 +10,14 @@ let dataList = "";
 dataResto.forEach(function(data) {
     dataList +=`
     <div class="card">
-        <img class="card_item_img" src="${data.pictureId}" alt="" title="${data.name}">
+        <img class="card_item_img" src="${data.pictureId}" alt="${data.name}" title="${data.name}">
         <div class="city">${data.city}</div>
         <div class="card_item_content">
+            <h1 class="card_item_title"><a href="#">${data.name}</a></h1>
             <p class="card_item_rating">
                 Rating : 
-                <a href="#" class="card_item_rating_value">${data.rating}</a>
+                <span class="card_item_rating_value" aria-label="rating ${data.rating}">${data.rating}</span>
             </p>
-            <h1 class="card_item_title"><a href="#">${data.name}</a></h1>
             <div class="card_item_desc">${data.description}</div>
         </div>
     </div>

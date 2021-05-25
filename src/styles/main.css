@@ -6,30 +6,47 @@
 	box-sizing: border-box;
 }
 
-html, body {
+body {
     font-family: 'Quicksand', sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
 }
 
+.skip-link {
+    position: absolute;
+    top: -45px;
+    left: 0;
+    background-color: brown;
+    color: white;
+    padding: 12px;
+    z-index: 100;
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 .menumobile {
     background-color: cornflowerblue;
     width: 100%;
     display: flex;
-    padding: 10px;
     font-weight: 600;
     font-size: 20px;
     color: white;
     justify-content: space-between;
+    padding: 14px 0 0 8px;
 }
 
 .navmobile {
     background-color: cornflowerblue;
     width: 100%;
     display: flex;
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .navlistmobile {
@@ -47,9 +64,18 @@ html, body {
     color: white;
 }
 
+.navitemmobile a {
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
 .iconmenu a {
     text-decoration: none;
     color: white;
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .navmobile a {
@@ -61,7 +87,6 @@ html, body {
 
 .nav {
     background-color: cornflowerblue;
-    position: sticky;
     width: 100%;
     display: flex;
     font-weight: 600;
@@ -73,6 +98,8 @@ html, body {
     padding: 0;
     margin: 0;
     text-align: right;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .navitem {
@@ -82,12 +109,21 @@ html, body {
     line-height: 24px;
 }
 
+.navitem a{
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
 .logo {
     width: 20%;
     box-sizing: border-box;
     display: inline-block;
     line-height: 24px;
     text-align: left;
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .nav a {
@@ -99,6 +135,7 @@ html, body {
 
 .nav a:hover {
     text-decoration: none;
+    color: black;
 }
 
 .hero {
@@ -121,7 +158,8 @@ html, body {
 	font-size: 36px;
 	text-shadow: 1px 1px cornflowerblue;
 }
-.hero p {
+
+.hero h2 {
 	color: #fff;
 	margin-top: 16px;
 	font-size: 18px;
@@ -132,6 +170,12 @@ html, body {
 img {
     display: block;
     width: 100%;
+    object-fit: cover;
+}
+
+main {
+    width: 100%;
+    margin: auto;
 }
 
 .content {
@@ -139,6 +183,7 @@ img {
 }
 
 .explore {
+    padding: 0 0 20px 0;
     text-align: center;
     color: cornflowerblue;
 }
@@ -146,24 +191,22 @@ img {
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
     border-radius: 10px;
-    padding: 10px;
-    margin: 5px;
     width: 100%;
     overflow: hidden;
     position: relative;
 }
 
 .list {
-    margin: 32px auto;
     text-align: left;
     display: grid;
-    grid-row-gap: 18px;
+    grid-column-gap: 20px;
+	grid-row-gap: 16px
 }
 
 .city {
     position: absolute;
-    top: 8px;
-    left: 16px;
+    top: 10px;
+    right: 16px;
     border-radius: 6px;
     background-color: cornflowerblue;
     padding: 5px 10px;
@@ -177,31 +220,44 @@ img {
 
 .card_item_img {
     width: 100%;
-    max-height: 200px;
+    max-height: 180px;
+    object-fit: cover;
 }
 
 .card_item_rating {
-    font-size: 12px;
+    font-size: 14px;
+}
 
+.card_item_title {
+    text-decoration: none;
 }
 
 .card_item_rating_value {
     color: cornflowerblue;
+    font-weight: bolder;
+}
+
+.card_item_title a {
     text-decoration: none;
+    color: cornflowerblue;
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .card_item_desc {
-    margin-top: -30px;
-    font-size: 12px;
-    line-height: 1.5em;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 }
 
 footer {
-    bottom: 0;
     background-color: cornflowerblue;
     color: white;
-    width: 100%;
     padding: 20px;
     text-align: center;
-    font-size: 20;
+    font-size: 10px;
 }
